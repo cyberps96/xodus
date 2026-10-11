@@ -16,7 +16,7 @@ pub async fn run(
         let mut magic = [0u8; 4];
         if (&file).read_exact(&mut magic).is_ok() && &magic == b"PK\x03\x04" {
             tracing::info!("Detected MSIXVC2 container, extracting with msixvc2 engine...");
-            match msixvc::msixvc2::Msixvc2Archive::open(&path) {
+            match msixvc2::Msixvc2Archive::open(&path) {
                 Ok(mut archive) => {
                     let content_id = archive.package().content_id.to_string();
                     tracing::info!("Package ContentId: {content_id}");

@@ -7,8 +7,8 @@ use thiserror::Error;
 use uuid::Uuid;
 use zip::ZipArchive;
 
-use super::cbor::*;
-use super::crypto::*;
+use crate::cbor::*;
+use crate::crypto::*;
 
 #[derive(Error, Debug)]
 pub enum Msixvc2Error {

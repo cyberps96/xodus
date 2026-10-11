@@ -5,7 +5,7 @@ use sha2::Sha256;
 use std::cmp::min;
 use thiserror::Error;
 
-use super::cbor::{PackagingEncryptionAlgorithm, PackagingKeyPurpose};
+use crate::cbor::{PackagingEncryptionAlgorithm, PackagingKeyPurpose};
 
 type Aes256CbcDec = cbc::Decryptor<Aes256>;
 

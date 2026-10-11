@@ -3393,31 +3393,23 @@ name = "msixvc"
 version = "0.1.0"
 dependencies = [
  "aes 0.9.3",
- "aes-keywrap",
  "bitflags 2.13.1",
  "bytes",
- "cbc 0.2.1",
  "chrono",
- "ciborium",
- "flate2",
  "futures-util",
  "gpt",
- "hmac 0.13.0",
  "msixvc-common",
  "ntfs",
  "num_enum",
  "pin-project",
  "reqwest 0.13.4",
- "serde",
  "sha2 0.11.0",
- "tempfile",
  "thiserror 2.0.20",
  "tokio",
  "tokio-util",
  "typenum",
  "uuid",
  "zerocopy",
- "zip",
 ]
 
 [[package]]
@@ -3435,6 +3427,24 @@ dependencies = [
  "tokio",
  "typenum",
  "uuid",
+]
+
+[[package]]
+name = "msixvc2"
+version = "0.1.0"
+dependencies = [
+ "aes 0.9.3",
+ "aes-keywrap",
+ "cbc 0.2.1",
+ "ciborium",
+ "flate2",
+ "hmac 0.13.0",
+ "serde",
+ "sha2 0.11.0",
+ "tempfile",
+ "thiserror 2.0.20",
+ "uuid",
+ "zip",
 ]
 
 [[package]]
@@ -7244,6 +7254,7 @@ dependencies = [
  "indicatif",
  "inquire",
  "msixvc",
+ "msixvc2",
  "nix",
  "reqwest 0.13.4",
  "rustix",
